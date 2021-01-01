@@ -1,0 +1,56 @@
+PROBLEM:
+
+
+Given a decimal number N, compute its binary equivalent.
+
+
+Example 1:
+Input: N = 7
+Output: 111
+
+ 
+
+Example 2:
+Input: N = 33
+Output: 100001
+ 
+
+Your Task:
+You dont need to read input or print anything. Complete the function toBinary() which takes the decimal number N as input parameter and returns its binary equivalent.
+
+ 
+ 
+ 
+ SOLUTION:
+ 
+ 
+ C CODE:
+ 
+ 
+ 
+//User function Template for C
+
+void toBinary(int N)
+{
+    // your code here
+    
+    long int binary=0,rem=0;
+    if(N==0)
+    {
+        printf("%d",0);
+    }
+    else
+    {
+        int i=0;
+        while(N>0)
+        {
+            rem=N%2;
+            binary=binary+rem*pow(10,i);
+            N=N/2;
+            i++;
+        }
+        
+    }
+    printf("%ld",binary);
+        
+}
