@@ -1,0 +1,103 @@
+PROBLEM:
+
+
+Write a program to add two matrices.
+
+Input
+The first line of input contains an integer T denoting the number of test cases. Then T test cases follow. Each test contains an integer N denoting the size of the square matrix. Then the two square matrix of size N*N is taken as input in next two lines.
+
+Output:
+For each test case in a new line print separated values of the matrix denoting addition of the two matrices.
+ 
+
+Constraints:
+1<=T<=100
+1<=N<=20
+1<=a[i][j]<=1000
+
+Example:
+Input:
+2
+4
+1 1 1 1 2 2 2 2 3 3 3 3 4 4 4 4
+1 1 1 1 2 2 2 2 3 3 3 3 4 4 4 4
+2
+1 2 3 4
+3 4 2 1
+
+Output:
+2 2 2 2 4 4 4 4 6 6 6 6 8 8 8 8 
+4 6 5 5
+
+
+
+SOLUTION:
+
+
+JAVA CODE:
+
+/*package whatever //do not write package name here */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class GFG {
+	public static void main (String[] args) {
+		
+		
+		Scanner sc=new Scanner(System.in);
+		int t=sc.nextInt();
+		
+		
+		while(t>0)
+		{
+		int m=sc.nextInt();
+// 		int n=sc.nextInt();
+		int a[][]=new int[m][m];
+		int b[][]=new int[m][m];
+			int c[][]=new int[m][m];
+		
+		for(int i=0;i<m;i++)
+		{
+		    for(int j=0;j<m;j++)
+		    {
+		        a[i][j]=sc.nextInt();
+		    }
+		}
+		for(int i=0;i<m;i++)
+		{
+		    for(int j=0;j<m;j++)
+		    {
+		        b[i][j]=sc.nextInt();
+		    }
+		}
+		
+	
+		
+		for(int i=0;i<m;i++)
+		{
+		    for(int j=0;j<m;j++)
+		    {
+		        c[i][j]=a[i][j]+b[i][j];
+		      //  System.out.print(c[i][j]+" ");
+		    }
+		  //  System.out.println();
+		}
+		
+			for(int i=0;i<m;i++)
+		{
+		    for(int j=0;j<m;j++)
+		    {
+		        
+		       System.out.print(c[i][j]+" ");
+		    }
+		  
+		}
+		System.out.println();
+		t--;
+		
+		}
+		
+	}
+}
