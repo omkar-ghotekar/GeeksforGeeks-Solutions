@@ -1,0 +1,62 @@
+PROBLEM:
+
+
+Given two integer numbers a and b, the task is to find count of all common divisors of given numbers.
+
+Example 1:
+
+Input: a = 12, b = 24
+Output: 6 
+Explanation: all common divisors 
+are 1, 2, 3, 4, 6 and 12.
+
+Example 2:
+
+Input: a = 3, b = 17
+Output: 1
+Explanation: all common divisors are 1.
+
+Your Task:  
+You dont need to read input or print anything. Complete the function commDiv() which takes n as input parameter and returns the number of common divisors.
+
+Expected Time Complexity: O(sqrt(n))
+Expected Auxiliary Space: O(1)
+
+Constraints:
+1<= a,b <=1000
+
+
+SOLUTION:
+
+
+JAVA CODE:
+
+
+//User function Template for Java
+class Solution {
+    static long commDiv(long a, long b){
+        // code here
+        
+        // code here
+long cnt = 0;
+long gcd = GCD(a,b);
+if(gcd == 1)
+return(1);
+
+for(long i = 1 ; i <= gcd ; i++ )
+{
+if(a % i == 0 && b % i ==0 )
+cnt++;
+}
+return(cnt);
+
+}
+static long GCD(long a , long b)
+{
+
+if(b == 0)
+return(a);
+else
+return GCD(b , a%b);
+    }
+}
