@@ -1,0 +1,47 @@
+PROBLEM:
+
+Given only a pointer to a node to be deleted in a singly linked list. Print the whole Linked List after deletion.
+
+Input:
+The first line of input contains an element T, denoting the no of test cases. Then T test cases follow. Each test case contains two lines. The first line of each test case contains two integers N denoting the no of elements of the linked list and P denoting the number of the node which is to be deleted (starting from 0) . Then in the next line are N space separated values of the linked list.
+
+Output:
+The output for each test case will be the space separated elements of the updated linked list.
+
+Constraints:
+1<=T<=100
+2<=N<=103
+0<=P<(N-1)
+Example(To be used only for expected output):
+
+Input:
+2
+5 2
+1 2 3 4 5
+4 0
+1 3 6 9
+
+Output:
+1 2 4 5
+3 6 9
+
+
+
+SOLUTION:
+
+
+JAVA CODE:
+
+
+//User function Template for Java
+class GfG{
+    void deleteNode(Node node) {
+        //Add your code here
+        Node temp=node;
+        node.data=temp.next.data;
+        node.next=temp.next.next;
+        
+        
+ 
+    }
+}
