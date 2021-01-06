@@ -1,0 +1,54 @@
+PROBLEM:
+
+
+You are given the pointer to the head node of a linked list. You have to print all of its elements in order in a single line.
+
+Input:
+You have to complete a method which takes one argument: the head of the linked list. You should not read any input from stdin/console. The struct Node has a data part which stores the data and a next pointer which points to the next element of the linked list. There are multiple test cases. For each test case, this method will be called individually.
+
+Output:
+Print the elements of the linked list in a single line separated by a single space.
+
+Your Task:
+
+You don't need to read input or print anything. Your task is to complete the function display() which takes the head (the head node of the linked list) and You have to print the elements of the linked list.
+ 
+
+Example:
+
+Input:
+N=2
+LinkedList={1 , 2}
+Output:
+1 2
+Explanation:
+Here the first line denotes an integer 'N' the no of nodes 
+of linked list .Then the line after that contains N space
+separated integers denoting the values of the nodes of
+the linked list.
+
+
+SOLUTION:
+
+
+JAVA CODE:
+
+
+class GfG
+{
+    // Print elements of a linked list on console
+    // head pointer input could be NULL as well
+    // for empty list
+    void printList(Node head)
+    {
+        //add code here.
+        
+        Node temp=head;
+        
+        while(temp!=null)
+        {
+            System.out.print(temp.data+" ");
+            temp=temp.next;
+        }
+    }
+}
