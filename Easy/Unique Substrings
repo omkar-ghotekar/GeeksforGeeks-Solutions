@@ -1,0 +1,61 @@
+PROBLEM:
+
+
+Given a string str. Calculate the total number of unique substrings of the given string.
+
+Example 1:
+
+Input:
+abd
+
+Ouput:
+6
+
+Explanation:
+str = abd. The 6 unique substrings 
+are {a, b, d, ab, bd, abd}.
+Example 2:
+
+Input:
+jaja
+
+Ouput:
+7
+
+Explanation:
+str = jaja. The substrings will be j, a, j, a, 
+ja, aj, ja, jaj, aja, jaja. Out of these the 
+unique are j, a, ja, aj, jaj, aja, jaja.
+User Task:
+You need to complete the function unique_substring() that takes str as a parameter and returns the count of unique substrings.
+
+Constraints:
+1 <= |str| <= 100
+
+
+SOLUTION:
+
+C++ CODE:
+
+
+//User function Template for C++
+
+int unique_substring(string str)
+{
+    // Your code here
+    
+    set<string> unique_substrings;
+    int length=str.length();
+    
+    for(int i=0;i<str.length();i++)
+    {
+        string substr="";
+        for(int j=i;j<length;j++)
+        {
+            substr=substr+str[j];
+            unique_substrings.insert(substr);
+        }
+    }
+    return unique_substrings.size();
+    
+}
