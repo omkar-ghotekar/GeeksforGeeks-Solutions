@@ -1,0 +1,79 @@
+PROBLEM:
+
+
+Generate all prime numbers between two given numbers.
+
+Input:
+
+The first line of the input contains an integer T denoting the number of test cases. Then T test cases follow. Each test case consists of a single line containing two space separated integers m and n.
+Output:
+
+For every test case print all prime numbers p such that m <= p <= n, space separated. Separate the answers for each test case by a new line.
+
+Constraints:
+1<=T<=60
+1 <= m <= n <= 100000,
+n - m <= 100000
+
+Example:
+
+Input:
+
+2
+
+1 10
+
+3 5
+
+Output:
+
+2 3 5 7
+
+3 5
+
+
+
+SOLUTION:
+
+
+JAVA CODE:
+
+
+/*package whatever //do not write package name here */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class GFG {
+	public static void main (String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int t=sc.nextInt();
+		while(t-->0)
+		{
+		    int a=sc.nextInt();
+		    int b=sc.nextInt();
+		    int flag=1;
+		    for(int i=a;i<=b;i++)
+		    {
+		        if(i==1 || i==0)
+		        continue;
+		        
+		        flag =1;
+		        
+		        for(int j=2;j<=Math.sqrt(i);j++)
+		        {
+		            if(i%j==0)
+		            {
+		                flag =0;
+		                break;
+		            }
+		        }
+		        
+		        if(flag==1)
+		        System.out.print(i+" ");
+		    }
+		    System.out.println();
+		}
+	}
+}
