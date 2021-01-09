@@ -1,0 +1,65 @@
+PROBLEM:
+
+
+Given a stream of numbers, print average or mean of the stream at every point.
+
+Input: The first line of input contains an integer T denoting the number of test cases.
+For each test case there will be two lines. The first line contains an integer N denoting the size of array C[], and second line contains N space seperated integers C[i].
+
+Output:
+Print the average of the stream at every point (in integer).
+
+Constraints:
+1 ≤ T ≤ 20
+1 ≤ N ≤ 50
+1 ≤ C[i] ≤ 100
+
+Example:
+Input
+2
+5
+10 20 30 40 50
+2
+12 2
+
+Output
+10 15 20 25 30
+12 7
+
+
+
+SOLUTION:
+
+
+JAVA CODE:
+
+
+/*package whatever //do not write package name here */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class GFG {
+	public static void main (String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		int t=sc.nextInt();
+		
+		while(t--!=0)
+		{
+		    int n=sc.nextInt();
+		    int[] arr=new int[n];
+		    int sum=0;
+		    for(int i=0;i<n;i++)
+		    {
+		        arr[i]=sc.nextInt();
+		        sum=sum+arr[i];
+		        System.out.print(sum/(i+1)+" ");
+		    }
+		  System.out.println();  
+		}
+		
+		
+	}
+}
