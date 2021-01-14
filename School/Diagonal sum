@@ -1,0 +1,56 @@
+PROBLEM:
+
+
+Given a square matrix of size n×n. Your task is to calculate the sum of its diagonals.
+ 
+
+Example 1:
+
+Input: matrix = {{1, 1, 1}, 
+{1, 1, 1}, {1, 1, 1}}
+Output: 6
+Example 2:
+
+Input: matrix = {{1, 2}, {3, 4}}
+Output: 10
+ 
+
+Your Task:
+You don't need to read or print anyhting. Your task is to complete the function DiagonalSum() which takes the matrix as input parameter and returns the sum of its diagonals.
+ 
+
+Expected Time Complexity: O(n)
+Expected Space Complexity: O(1)
+
+Constraints:
+1 <= n <= 100
+1 <= matrix elements <= 10000
+
+
+SOLUTION:
+
+
+JAVA CODE:
+
+
+class Solution
+{
+    public int DiagonalSum(int[][] matrix)
+    {
+        int sum=0,sum1=0;
+        // code here
+        for(int i=0;i<matrix.length;i++)
+        {
+            for(int j=0;j<matrix.length;j++)
+            {
+                if(i==j)
+                sum=sum+matrix[i][j];
+                
+                if ((i + j) == (matrix.length - 1)) 
+                sum1 =sum1+ matrix[i][j]; 
+            }
+        }
+        return sum1+sum;
+    }
+    
+}
