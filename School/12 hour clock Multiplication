@@ -1,0 +1,46 @@
+PROBLEM:
+
+Example 1:
+
+Input:
+num1 = 2, num2 = 3
+Output:
+6
+Explanation:
+2*3 = 6. The time in a 12 hour clock is 6.
+Example 2:
+
+Input:
+num1 = 3, num2 = 5
+Output:
+3
+Explanation:
+3*5 = 15. The time in a 12 hour clock is 3.
+ 
+
+Your Task:
+You don't need to read input or print anything. Your task is to complete the function mulClock() which takes 2 Integers num1, and num2 as input and returns the required time in a 12 hour clock format.
+
+ 
+
+Expected Time Complexity: O(1)
+Expected Auxiliary Space: O(1)
+
+ 
+
+Constraints:
+1 <= num1,num2 <= 103
+
+
+SOLUTION:
+
+
+
+class Solution {
+    static int mulClock(int num1, int num2) {
+        // code here
+        int c=num1*num2;
+        int m=c%12;
+        return m;
+    }
+};
