@@ -1,0 +1,61 @@
+PROBLEM:
+
+
+Given N, check whether it is a Narcissistic number or not.
+
+Note: Narcissistic Number is a number that is the sum of its own digits each raised to the power of the number of digits
+ 
+
+Example 1:
+
+Input:
+N = 407
+Output:
+1
+Explanation:
+43+03+73 = 64+0+343 
+= 407 equals to N.
+Example 2:
+
+Input:
+N = 111
+Output:
+0
+Explanation:
+13+13+13 = 1+1+1
+= 3 not equals to N.
+
+Your Task:
+You don't need to read input or print anything. Your task is to complete the function isNarcissistic() which takes an integer N as input parameters and returns an integer, 1 if N is a narcissistic number or 0 otherwise.
+ 
+
+Expected Time Complexity: O(log N)
+Expected Space Complexity: O(1)
+ 
+
+Constraints:
+1 <= N <= 105
+
+
+SOLUTION:
+
+
+CPP CODE:
+
+
+
+class Solution{
+public:
+    int isNarcissistic(int N){
+        // code here
+        int a,digit=ceil(log10(N)),n1=N,sum=0;
+while(N)
+{
+a=N%10;
+sum+=pow(a,digit);
+N=N/10;
+
+}
+return n1==sum;
+    }
+};
