@@ -1,0 +1,65 @@
+PROBLEM:
+
+
+You are a traveller, lost in a jungle.But you have the Map with you.And you remember the route you travelled so you will backtrack and reach the Starting point. Your task is to print the starting point.
+
+Input:
+First line consists of T test cases. Each test cases consists of 3 lines.
+First line of each test case consist of two integers X,Y denoting of Your Current location.
+Second line of each test case consist of an integer N denoting of number of paths you travelled.
+Third line of each test case consist of 2*N spaced integers Xi,Yj denoting the points at the paths you travelled.
+
+Output:
+Print the Starting point in respective line.
+
+Constraints:
+1<=T<=20
+1<=N<=20
+1<=X,Y<=10
+
+Example:
+Input:
+1
+1 1
+2
+1 0 0 1
+
+Output:
+0 0
+
+
+
+SOLUTION:
+
+
+JAVA CODE:
+
+
+/*package whatever //do not write package name here */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class GFG {
+	public static void main (String[] args) {
+		//code
+		Scanner sc=new Scanner(System.in);
+		int t=sc.nextInt();
+		
+		while(t--!=0)
+		{
+		    int x=sc.nextInt();
+		    int y=sc.nextInt();
+		    int len=sc.nextInt();
+		    int sumx=0,sumy=0;
+		    for(int i=0;i<len;i++)
+		    {
+		        sumx=sumx+sc.nextInt();
+		        sumy=sumy+sc.nextInt();
+		        
+		    }
+		    System.out.println((x-sumx)+" "+(y-sumy));
+		}
+	}
+}
