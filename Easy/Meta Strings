@@ -1,0 +1,95 @@
+PROBLEM:
+
+
+Given two strings, the task is to check whether these strings are meta strings or not. Meta strings are the strings which can be made equal by exactly one swap in any of the strings. Equal string are not considered here as Meta strings.
+
+Examples:
+
+Input : A = "geeks" 
+        B = "keegs"
+Output : 1
+By just swapping 'k' and 'g' in any of string, 
+both will become same.
+
+Input : A = "rsting"
+        B = "string
+Output : 0
+
+
+Input:
+The first line of input contains an integer T denoting the no of test cases. Then T test cases follow. Each test case contains two lines. The first line denoting string A and the second line denoting string B.
+
+Output:
+For each test case in a new line print 1 if A and B are meta strings, else print 0.
+
+Constraints:
+1<=T<=100
+1<=Length of strings<=1000
+
+Example:
+Input:
+2
+geeks
+keegs
+geeks
+geeks
+
+Output:
+1
+0
+
+
+
+SOLUTION:
+
+
+JAVA CODE:
+
+
+/*package whatever //do not write package name here */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class GFG {
+	public static void main (String[] args) {
+		//code
+		
+		Scanner sc=new Scanner(System.in);
+		int t=sc.nextInt();
+		
+		while(t--!=0)
+		{
+		    String s=sc.next();
+		    String s1=sc.next();
+		    
+		    int c=0;
+		    int m=0;
+		    
+		    if(s.length()==s1.length())
+		    {
+		        for(int j=0;j<s.length();j++)
+		        {
+		            if(s.charAt(j)!=s1.charAt(j))
+		            {
+		                c++;
+		                m=m+s.charAt(j)-s1.charAt(j);
+		            }
+		            if(c>2)
+		            {
+		                break;
+		            }
+		        }
+		    }
+		    if(c==2 && m==0)
+		    {
+		        System.out.println("1");
+		    }
+		    else
+		    {
+		        System.out.println("0");
+		    }
+		}
+	}
+}
