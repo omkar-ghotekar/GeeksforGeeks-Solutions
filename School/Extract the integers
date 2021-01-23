@@ -1,0 +1,70 @@
+PROBLEM:
+
+
+Given a string, the task is to extract all the integers from it.
+
+Input:
+The first line of input contains an integer T denoting the number of test cases. Then T test cases follow. Each test case contains a string S as input.
+
+Output:
+For each test case, print all the integers with one space, if the string does not contain any integers, print "No Integers".
+
+Constraints:
+1<=T<=100
+1<=S<=105
+
+Example:
+Input:
+3
+geeksforgeeks 12 23 practice
+1: Prakhar Agrawal, 2: Manish Kumar Rai, 3: Rishabh Gupta
+geeksforgeeks
+
+Output:
+12 23
+1 2 3
+No Integers
+
+
+
+SOLUTION:
+
+
+JAVA CODE:
+
+
+/*package whatever //do not write package name here */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class GFG {
+	public static void main (String[] args) {
+		//code
+		
+	Scanner sc = new Scanner(System.in);
+int T = sc.nextInt();
+sc.nextLine();
+while (T-- > 0) {
+int flag = 0;
+String S = sc.nextLine();
+char c[] = S.toCharArray();
+
+for (int i = 0; i < S.length(); ++i) {
+if (Character.isDigit(c[i])) {
+System.out.print(c[i]);
+flag ++;
+if (i < S.length()-1 && !Character.isDigit(c[i+1])) {
+System.out.print(" ");
+}
+}
+}
+if (flag == 0) {
+System.out.print("No Integers");
+}
+System.out.println();
+}
+
+}
+	}
